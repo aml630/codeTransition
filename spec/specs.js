@@ -2,7 +2,7 @@
 describe('Ticket', function() {
   it("Display Ticket Object Inputs", function () {
     var testTicket = new Ticket(20, 55, 9);
-    expect(testTicket.time).to.equal(20);
+    expect(testTicket.movie).to.equal(20);
     expect(testTicket.age).to.equal(55);
     expect(testTicket.matinee).to.equal(9);
   });
@@ -23,5 +23,9 @@ describe('Ticket', function() {
 
   it("should discount for matinee times", function() {
     var testTicket = new Ticket(20, 55, 9);    expect(testTicket.isMatinee()).to.equal(true);
+  });
+
+  it("it should calculate ticket price based on price functions", function() {
+    var testTicket = new Ticket(20, 55, 9);    expect(testTicket.price()).to.equal(4);
   });
 });
