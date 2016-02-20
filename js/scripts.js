@@ -1,4 +1,7 @@
 
+
+
+
 function Ticket(movie, age, matinee) {
   this.movie = movie;
   this.age = age;
@@ -57,8 +60,10 @@ $("form").submit(function (event) {
   $(".btn-info").text(finalTicket.price())
   console.log(finalPrice)
   event.preventDefault()
-
-
 })
+
+$(".question").click(function () {
+  $(this).next(".answer").slideToggle("slow");
+});
 
 });
